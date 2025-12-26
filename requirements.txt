@@ -4,3 +4,4 @@ qrcode
 pyshorteners
 edge-tts
 pymango
+flask
