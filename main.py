@@ -1,3 +1,18 @@
+from flask import Flask
+import threading
+
+# Fake Server Code
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "Bot is running happy!"
+
+def run_flask():
+    app.run(host="0.0.0.0", port=8000)
+
+# Start server in background
+threading.Thread(target=run_flask).start()
 import telebot
 from telebot import types
 from PIL import Image
