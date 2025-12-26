@@ -1,0 +1,6 @@
+pyTelegramBotAPI
+Pillow
+qrcode
+pyshorteners
+edge-tts
+pymango
