@@ -1,4 +1,4 @@
-from flask import Flask
+2from flask import Flask
 import threading
 
 # Fake Server Code
@@ -23,10 +23,6 @@ import asyncio
 import edge_tts # Real Voice ke liye
 import pyshorteners
 
-# ==========================================
-# 👇 TERI DETAILS (PRE-FILLED)
-# ==========================================
-
 API_TOKEN = "7873592641:AAGtXYGIb4K95012QOHIcrZBILRJYTj8DhI"
 ADMIN_ID = 7197775068
 CHANNEL_USERNAME = "@MyProConverter"
@@ -35,10 +31,6 @@ ADMIN_USERNAME = "@iDivaaaa"
 UPI_ID = "vickyedit@ybl"
 PRICE_TAG = "Rs 79/ Month"
 FREE_LIMIT = 2
-
-# ==========================================
-# 🛑 MAIN LOGIC
-# ==========================================
 
 bot = telebot.TeleBot(API_TOKEN)
 shortener = pyshorteners.Shortener()
@@ -237,4 +229,5 @@ def make_pdf(message):
         user_queues[user_id] = []
 
 print("✅ ULTRA PRO BOT STARTED...")
-bot.polling()
+bot.infinity_polling(timeout=10, long_polling_timeout=5)
+
